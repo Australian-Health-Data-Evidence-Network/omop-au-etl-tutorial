@@ -23,7 +23,7 @@ The repository is organised as follows:
   - Summary documentation and presentation materials  
     *(Add presentation link here once available)*
 
-- [`fig/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/fig)  
+- <a href="https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/fig" target="_blank" rel="noopener noreferrer">fig/</a> 
   Images used in documentation and presentations.
 
 - [`data/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/data)  
