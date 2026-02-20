@@ -23,16 +23,18 @@ The repository is organised as follows:
   - Summary documentation and presentation materials  
     *(Add presentation link here once available)*
 
-- [`fig/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/fig)  
-  Images used in documentation and presentations.
-
 - [`data/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/data)  
   Example source datasets:
   - NMDS APC-like data: [`apc_data.csv`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/blob/main/data/apc_data.csv)
   - PLIDA PBS-like data: [`plida_pbs_data.csv`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/blob/main/data/plida_pbs_data.csv)
 
+- [`fig/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/fig)  
+  Images used in documentation and presentations.
+
 - [`materials/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/materials)  
   Contains intermediate outputs from the ETL design process (e.g., WhiteRabbit scan reports, mapping files, documentation).
+
+
 
 ---
 
@@ -77,6 +79,8 @@ WhiteRabbit and Rabbit-In-A-Hat require:
 ### Install Java
 
 You may install Java from:
+
+`Open these pages (Ctrl/Cmd + Click to open in a new tab for your convenience):`
 
 - OpenJDK: <a href="https://adoptium.net/temurin/releases?version=25&mode=filter&os=any&arch=any" target="_blank" rel="noopener noreferrer">https://adoptium.net/</a>   
 - Oracle Java: <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noopener noreferrer">https://www.oracle.com/java/technologies/downloads/</a> 
@@ -221,10 +225,12 @@ Any of the following are valid:
 - `11`
 - `17`
 - `21`
-
-As long as it is **1.8 or higher**, your setup is correct.
+- `25`
+- `As long as it is **1.8 or higher**, your setup is correct.`
 
 ## 2. Download WhiteRabbit and Rabbit-In-A-Hat
+
+`Open these pages (Ctrl/Cmd + Click to open in a new tab for your convenience):`
 
 Download the latest release from the official OHDSI repository:
 
