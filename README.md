@@ -23,7 +23,7 @@ The repository is organised as follows:
   - Summary documentation and presentation materials  
     *(Add presentation link here once available)*
 
-- <a href="https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/fig" target="_blank" rel="noopener noreferrer">fig/</a> 
+- [`fig/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/fig)  
   Images used in documentation and presentations.
 
 - [`data/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/data)  
@@ -78,64 +78,302 @@ WhiteRabbit and Rabbit-In-A-Hat require:
 
 You may install Java from:
 
-- OpenJDK (recommended): https://adoptium.net/  
-- Oracle Java: https://www.oracle.com/java/technologies/downloads/
+- OpenJDK: <a href="https://adoptium.net/temurin/releases?version=25&mode=filter&os=any&arch=any" target="_blank" rel="noopener noreferrer">https://adoptium.net/</a>   
+- Oracle Java: <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noopener noreferrer">https://www.oracle.com/java/technologies/downloads/</a> 
 
-After installation, verify:
+# Verify Java Installation
+
+After installing Java, verify the installation by running:
 
 ```bash
 java -version
 ```
 
-You should see a version number ≥ 1.8.
+You should see a version number **≥ 1.8**.
 
 ---
 
-## 2. Download WhiteRabbit
+# 🪟 Windows
+
+## Step 1 — Open Command Prompt
+
+Choose one of the following:
+
+**Option A (Quickest)**  
+- Press `Win + R`  
+- Type `cmd`  
+- Press `Enter`
+
+**Option B**  
+- Click **Start**
+- Search for **Command Prompt**
+- Open it
+
+**Option C (PowerShell also works)**  
+- Search for **PowerShell**
+- Open it
+
+---
+
+## Step 2 — Run
+
+```bash
+java -version
+```
+
+### Expected Output Example
+
+```bash
+java version "1.8.0_381"
+Java(TM) SE Runtime Environment
+```
+
+or
+
+```bash
+openjdk version "17.0.9"
+```
+
+If the version is **1.8 or higher**, you're good to go.
+
+---
+
+### If You See This Error
+
+```bash
+'java' is not recognized as an internal or external command
+```
+
+This means:
+- Java is not installed, **or**
+- Java is not added to your system `PATH`
+
+You will need to install Java and ensure it is added to `PATH`.
+
+---
+
+# 🍎 macOS
+
+## Step 1 — Open Terminal
+
+- Press `Command + Space`
+- Type `Terminal`
+- Press `Enter`
+
+OR  
+
+Go to:
+
+Applications → Utilities → Terminal
+
+---
+
+## Step 2 — Run
+
+```bash
+java -version
+```
+
+If Java is not installed, macOS may prompt you to install it automatically.
+
+---
+
+# 🐧 Linux (Ubuntu / Debian)
+
+## Step 1 — Open Terminal
+
+- Press `Ctrl + Alt + T`
+OR
+- Search for **Terminal** in your applications menu
+
+---
+
+## Step 2 — Run
+
+```bash
+java -version
+```
+
+---
+
+## If Java Is Not Installed
+
+Install OpenJDK:
+
+```bash
+sudo apt update
+sudo apt install openjdk-17-jdk
+```
+
+Then verify again:
+
+```bash
+java -version
+```
+
+---
+
+# Acceptable Java Versions
+
+Any of the following are valid:
+
+- `1.8.x`
+- `11`
+- `17`
+- `21`
+
+As long as it is **1.8 or higher**, your setup is correct.
+
+## 2. Download WhiteRabbit and Rabbit-In-A-Hat
 
 Download the latest release from the official OHDSI repository:
 
+<a href="https://github.com/OHDSI/WhiteRabbit" target="_blank" rel="noopener noreferrer">
 https://github.com/OHDSI/WhiteRabbit
+</a>
 
-Steps:
+### How to Find the Release File
 
-1. Click **Releases**
-2. Download the latest `.zip` file
-3. Extract to a local directory
+1. Open the repository link above.
+2. On the right-hand side of the page, look for the **Releases** section.
+   - It is usually located in the right sidebar.
+3. Click on **Releases**.
+   - Alternatively, you can go directly to:
+   
+   <a href="https://github.com/OHDSI/WhiteRabbit/releases" target="_blank" rel="noopener noreferrer">
+   https://github.com/OHDSI/WhiteRabbit/releases
+   </a>
+
+4. Click the latest release (top-most version).
+5. Under **Assets**, download the `.zip` file.
+6. Extract the downloaded file to a local directory of your choice (e.g., `C:\WhiteRabbit` or `~/WhiteRabbit`).
 
 ---
 
 ## 3. Run the Tools
 
-After extracting:
+After downloading and extracting the WhiteRabbit release `.zip` file, you will see a folder structure similar to:
 
-### WhiteRabbit
+```
+WhiteRabbit/
+├── bin/
+├── repo/
+└── ...
+```
 
-- **Windows**
-  ```
-  bin/whiteRabbit.bat
-  ```
-
-- **macOS / Linux**
-  ```bash
-  ./bin/whiteRabbit
-  ```
+You will run the tools from inside the extracted folder.
 
 ---
 
-### Rabbit-In-A-Hat
+# WhiteRabbit
 
-- **Windows**
-  ```
-  bin/rabbitInAHat.bat
-  ```
+## 🪟 Windows
 
-- **macOS / Linux**
-  ```bash
-  ./bin/rabbitInAHat
-  ```
+### Step 1 — Open the Extracted Folder
+
+1. Navigate to the folder where you extracted WhiteRabbit.
+2. Open the `bin` folder.
+
+### Step 2 — Run the Batch File
+
+Double-click:
+
+```
+whiteRabbit.bat
+```
+
+3. Run:
+
+```
+whiteRabbit.bat
+```
+
+WhiteRabbit should now launch.
 
 ---
+
+## 🍎 macOS / 🐧 Linux
+
+### Step 1 — Open Terminal
+
+Navigate to the extracted WhiteRabbit folder.
+
+Example:
+
+```
+cd /path/to/WhiteRabbit
+```
+
+### Step 2 — Make Script Executable (First Time Only)
+
+```
+chmod +x bin/whiteRabbit
+```
+
+### Step 3 — Run WhiteRabbit
+
+```
+./bin/whiteRabbit
+```
+
+WhiteRabbit should now launch.
+
+---
+
+# Rabbit-In-A-Hat
+
+Rabbit-In-A-Hat is run the same way.
+
+---
+
+## 🪟 Windows
+
+### Option 1 — Double Click
+
+Inside the `bin` folder, double-click:
+
+```
+rabbitInAHat.bat
+```
+
+---
+
+## 🍎 macOS / 🐧 Linux
+
+### Step 1 — Navigate to Folder
+
+```
+cd /path/to/WhiteRabbit
+```
+
+### Step 2 — Make Executable (First Time Only)
+
+```
+chmod +x bin/rabbitInAHat
+```
+
+### Step 3 — Run
+
+```
+./bin/rabbitInAHat
+```
+
+---
+
+# Common Issues
+
+### "java is not recognized"
+Java is not installed or not added to PATH.
+
+### Permission denied (macOS/Linux)
+Run:
+```
+chmod +x bin/whiteRabbit
+chmod +x bin/rabbitInAHat
+```
+
+---
+
 
 # Notes
 
